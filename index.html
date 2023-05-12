@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sean Sulkow</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+  <header class="margin-reset">
+    <nav class="nav_placeholder">
+      <ul>
+        <a class="button" visibility="hidden">a</a>
+      </ul>
+    </nav>
+    <nav id="menu">
+      <ul><img src="/assets/sean.jpg" onclick=jump("my_picture") class="button" id="logo"></img></ul>
+      <ul>
+        
+        <button onclick=jump("about-me") class="button">About Me</button>
+        <button onclick=jump("skills") class="button">Skills</button>
+        <button onclick=jump("interests") class="button">Interests</button>
+        <button onclick=jump("work-experience") class="button">Work Experience</button>
+        <button onclick=jump("projects") class="button">Projects</button>
+      </ul>
+    </nav>
+    <section class="hero">
+      <section class="background_image" id="my_picture">
+        <h1 class="title">Sean Sulkow<h1>
+      </section>
+
+    </section>    
+          
+
+
+  </header>
+  <main><!-- <object classid="java:SnakeGame.class" codetype="application/java" data="/assets/Snake.jar" height=300 width=300></object> -->
+    <h2 id="about-me">About Me</h2>
+    <h3 id="skills">Skills</h3>
+    <section class="text" id="skills-text">
+    <p>
+      Some of my skills include object oriented programming, punctually responding to emails, and quickly learning new concepts. I can code in the following languages:
+      <ul class="list">
+        <li><object onclick="makeBig(e)" class="icon" data="/assets/java.svg" width=32px height=32px></object>Java</li>
+        <li><ion-icon class="icon" name="logo-python"></ion-icon>Python</li>
+        <li><object class="icon" data="/assets/c-sharp.svg" width=32px height=32px></object>C#</li>
+        <li><object class="icon" data="/assets/arduino.svg" width=32px height=32px></object>Arduino</li>
+        <li><ion-icon class="icon" name="logo-html5"></ion-icon>HTML</li>
+        <li><ion-icon class="icon" name="logo-css3"></ion-icon>CSS</li>
+        <li><ion-icon class="icon" name="logo-javascript"></ion-icon>JS</li>
+      </ul>
+    </p>
+    </section>
+    <h3 id="interests">Interests</h3>
+    <section class="text" id="interests-text">
+    <p>I love to code, but sometimes I like to not use screens for a while and just play a board game. It’s nice because I don’t have to worry about spending too much time on the computer, and it’s a lot of fun. Overall it makes me feel good because I get to spend time away from the computer, but still design a strategy as if I’m coding.</p>
+    </section>
+    <h3 id="work-experience">Work Experience</h3>
+    <section class="text" id="work-experience-text">
+    <p>During the summer of 2022, I worked as an intern for audible, developing an Alexa Skill. This job taught me the basics of using AWS, and how to interact with the internet via Java.</p>
+    </section>
+    <h3 id="projects">Projects</h3>
+    <section class="text" id="projects-text">
+    <p>In 2022, I decided to independently study Java using a tutorial. I learned how to make a snake game that opened in it's own window. The green snake grows as it eats more red apples, and dies if it crashes into anything else, including itself.</p>
+      <!-- First Image here -->
+      <section class="image-container">
+        <img src="assets/snake_early.PNG" class="demo-image">
+      </section>
+      <p>I decided that the tutorial was cool, but it could use more features, so I added difficulty controls and a display of your previous score.</p>
+      <!-- Second Image here -->
+      <p>Even on the highest difficulty, the game was still fairly predictable and easy if you played it a few times, so I decided to add orange enemies that chase you.</p>
+      <section class="image-container">
+        <img src="assets/snake_scoreboard.PNG" class="demo-image">
+        <img src="assets/snake_enemies.PNG" class="demo-image">
+      </section>
+      <!-- Last image here -->
+      <a class="download-link" href="projects/Snake.jar" download="snake.jar">If you want to play, you can click here to download.</a>
+    </section>
+  </main>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+</body>
+
+</html>
+

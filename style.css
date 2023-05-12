@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+:root{
+  --themeh:180;
+  --themes:80%;
+  --themel:50%;
+  --themecolor0:hsl(var(--themeh), var(--themes), var(--themel));
+  --themecolor1:hsl(var(--themeh),var(--themes),calc(var(--themel) + 10%));
+  --themecolor2:hsl(var(--themeh),var(--themes),calc(var(--themel) + 21%));
+  --themecolor3:hsl(var(--themeh),var(--themes),calc(var(--themel) + 33%));
+  --themecolor4:hsl(var(--themeh),var(--themes),calc(var(--themel) + 46%));
+  --themecolor-1:hsl(var(--themeh),var(--themes),calc(var(--themel) - 9%));
+  --themecolor-2:hsl(var(--themeh),var(--themes),calc(var(--themel) - 17%));
+  --themecolor-3:hsl(var(--themeh),var(--themes),calc(var(--themel) - 25%));
+  --themecolor-4:hsl(var(--themeh),var(--themes),calc(var(--themel) - 32%));
+  --documentHeight:760px;
+  --bottomHeight:760px;
+  --grt:1.618;
+  --widthconstant:34;
+  --rgbtext100:255;
+  --headerTopMargin:60px;
+  --rgbtext75:calc(255*3/4);
+  --rgbtext50:calc(255/2);
+  --rgbtext25:calc(255/4);
+  --rgbtext0:calc(255*0);
+  --bgcolor:var(--themecolor2);
+  --navcolor:var(--themecolor-3);
+  --herocolor:var(--themecolor3);
+  --textcolor100:white;
+  --textcolor75:rgb(var(--rgbtext75),var(--rgbtext75),var(--rgbtext75));
+  --textcolor50:rgb(var(--rgbtext50),var(--rgbtext50),var(--rgbtext50));
+  --textcolor25:rgb(var(--rgbtext25),var(--rgbtext25),var(--rgbtext25));
+  --textcolor0:rgb(var(--rgbtext0),var(--rgbtext0),var(--rgbtext0));
+  --scalefactor:calc(8/5);
+  --textsize6:calc(var(--textsize5) /var(--scalefactor));
+  --textsize5:calc(var(--textsize4) /var(--scalefactor));
+  --textsize4:2rem;
+  --textsize3:calc(var(--textsize4)*var(--scalefactor));
+  --textsize2:calc(var(--textsize3)*var(--scalefactor));
+  --textsize1:calc(var(--textsize2)*var(--scalefactor));
+}
+/* ::-moz-selection {
+  background-color:var(--theme-color4);
+  color:var(--theme-color-3);
+}
+::-webkit-selection {
+  background-color:var(--theme-color4);
+  color:var(--theme-color-3);
+}
+::selection {
+  background-color:var(--theme-color4);
+  color:var(--theme-color-3);
+} */
+p{
+  user-select:text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body{
+  margin:0px;
+  display:flex;
+  flex-direction: column;
+  background-color:var(--bgcolor);
+  color:var(--textcolor100);
+  font-size:var(--textsize4);
+  font-family:Mukta;
+}
+button{
+  color:var(--textcolor100);
+  font-size:var(--textsize4);
+  font-family:Mukta;
+}
+h1{
+  font-size: var(--textsize1);
+}
+h2{
+  font-size: var(--textsize2);
+  margin: var(--textsize3),0;
+  margin-top: var(--headerTopMargin);
+  margin-bottom: 30px;
+}
+h3{
+  font-size: var(--textsize3);
+  margin: var(--textsize4),0;
+  margin-top: var(--headerTopMargin);
+  margin-bottom: 30px;
+}
+h4{
+  font-size: var(--textsize4);
+  margin: var(--textsize5),0;
+}
+.text{
+  font-size: var(--textsize4);
+  margin: var(--textsize5),0;
+  line-height: calc(var(--grt) * var(--textsize4));
+  max-width: calc(var(--textsize4) * var(--widthconstant));
+}
+main{
+  /* padding-bottom:3rem; */
+  display:flex;
+  align-items:center;
+  flex-flow:column;
+  min-height:var(--documentHeight);
+  width:100% - var(--textsize3);
+  margin-left:var(--textsize3);
+  margin-bottom:var(--bottomHeight);
+}
+header{
+  display:flex;
+  flex-flow:column;
+  height:var(--documentHeight);
+  width:100%;
+  background-color:blue;
+}
+::-webkit-scrollbar{
+  width:20px;
+}
+::-webkit-scrollbar-thumb{
+  background:var(--themecolor-3);
+  width:5px;
+}
+::-webkit-scrollbar-track{
+  background:var(--themecolor3);
+  width:20px;
+}
+::-webkit-scrollbar-track-piece{
+  width:40px;
+}
+
+.hero{
+  flex: 9 0 0;
+  background-color:var(--herocolor);
+  display:flex;
+}
+.background_image{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-image:url(/assets/filler_image.jpg);
+  background-size: cover;
+  opacity:0.5;
+  flex: 1 1 0
+}
+#my_picture{
+  background-image:url(https://i0.wp.com/rwinters.com/images/2012CRLSPanorama.jpg?resize=800%2C316)
+}
+nav{
+  z-index:1;
+  position:fixed;
+  display:flex;
+  flex-flow:row;
+  width:100%;
+  justify-content:space-between;
+  /* flex: 1 0 0; */
+  background-color:var(--navcolor);
+  opacity:1;
+}
+.nav_placeholder{
+  position:absolute;
+  background-color:var(--themecolor-3);
+  opacity:1;
+  z-index:'';
+}
+.margin-0{
+  margin:0px;
+}
+*{
+  box-sizing:border-box;
+}
+*:before,*:after{
+  box-sizing:inherit;
+}
+nav > ul{
+  display:flex;
+  flex-flow:row;
+  list-style-type: none;
+  gap:64px;
+  align-items:center;
+  margin:32px 32px;
+  /* overflow:scroll; */
+}
+/* img, img:hover{
+  padding: 0rem 0rem;
+  transition:400ms;
+} */
+.button{
+  border:black 2px solid;
+  text-decoration: none;
+  text-align: center;
+  color:var(--textcolor0);
+  border-radius:2rem;
+  overflow:clip;
+}
+.button{
+  background-color:var(--themecolor3);
+  transition:500ms;
+}
+.button:not(img){
+  text-align-last: center;
+  padding: 1rem 2rem;
+  max-width: 20%;
+}
+.button:hover{
+  background-color:var(--themecolor2);
+  text-decoration: none;
+  color:var(--textcolor0);
+  box-shadow: calc( 3px * var(--grt) ) 3px calc( 5px * var(--grt)) black;
+  transform: translate(calc(-2px * var(--grt)), -2px);
+  transition:300ms;
+}
+.title{
+  color:var(--textcolor100);
+  background-color:rgba(0,0,0,0.75);
+  padding:1.5rem;
+  border-radius:2.5rem;
+}
+.nav_placeholder .button{
+  visibility:hidden;
+}
+#logo{
+  object-fit:cover;
+  width:100px;
+  height:100px;
+}
+.list{
+  align-self:flex-start;
+}
+.list li{
+  display:flex;
+  align-items:center;
+}
+.icon{
+  margin-right:32px;
+  user-select:none;
+  /* color:white; */
+  /* background-color:black; */
+}
+object{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(323deg) brightness(102%) contrast(101%);
+}
+.download-link{
+  color:var(--themecolor-3);
+  text-decoration: none;
+  transition:250ms;
+}
+.download-link:hover{
+  color:var(--themecolor-4);
+  transition:350ms;
+}
+.image-container{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+}
+.demo-image{
+  max-height:30rem;
+  max-width:30rem;
+  flex: 1 1 0;
+  margin: 30px;
+  align-self:center;
+}
