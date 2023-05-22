@@ -132,7 +132,7 @@ header{
 }
 
 .hero{
-  flex: 9 0 0;
+  flex: 9 1 0;
   background-color:var(--herocolor);
   display:flex;
 }
