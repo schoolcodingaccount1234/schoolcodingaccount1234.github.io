@@ -12,11 +12,12 @@
 
 <body>
   <header class="margin-reset">
-    <nav class="nav_placeholder">
+    <!-- <nav class="nav_placeholder">
       <ul>
         <a class="button" visibility="hidden">a</a>
       </ul>
-    </nav>
+    </nav> -->
+    
     <nav id="menu">
       <ul id="logo-holder"><img src="/assets/sean.jpg" onclick=jump("my_picture") class="button" id="logo"></img></ul>
       <ul>
@@ -27,6 +28,28 @@
         <button onclick=jump("work-experience") class="button">Work Experience</button>
         <button onclick=jump("projects") class="button">Projects</button>
       </ul>
+      
+    </nav>
+    <nav id="menu-mobile">
+      <input class="check" type="checkbox" id="hamburger-checkbox">
+      <label class="hamburger" for="hamburger-checkbox">
+        <ion-icon name="menu-outline" class="nav-icon-hamburger"></ion-icon>
+        <ion-icon name="close-outline" class="nav-icon-close"></ion-icon>
+    </label>
+      <ul id="logo-holder-mobile"><img src="/assets/sean.jpg" onclick=jump("my_picture") class="button" id="logo-mobile"></img></ul>
+      <ul id="links-mobile">
+        
+        <button onclick=jump("about-me") class="button">About Me</button>
+        <button onclick=jump("skills") class="button">Skills</button>
+        <button onclick=jump("interests") class="button">Interests</button>
+        <button onclick=jump("work-experience") class="button">Work Experience</button>
+        <button onclick=jump("projects") class="button">Projects</button>
+      </ul>
+      <!-- <input class="check" type="checkbox" id="hamburger-checkbox">
+      <label class="hamburger" for="hamburger-checkbox">
+        <ion-icon name="menu-outline" class="nav-icon-hamburger"></ion-icon>
+        <ion-icon name="close-outline" class="nav-icon-close"></ion-icon>
+      </label>   -->
     </nav>
     <section class="hero">
       <section class="background_image" id="my_picture">

@@ -29,7 +29,12 @@ setTimeout(handleResize,300);
 function jump(id) {
   const el = document.getElementById(id);
   const rect = el.getBoundingClientRect();
-  const nav = document.getElementsByTagName("nav")[1];
+  const nav = document.getElementById("menu");
   const margin = parseInt(getComputedStyle(el)["margin-top"]);
-  scroll({top:rect.top+window.scrollY-nav.offsetHeight-margin,behavior:"smooth"});
+  let navheight = nav.offsetHeight;
+  if(window.matchMedia("(max-width:40rem)").matches){
+    console.log("too small");
+    navheight = 0;
+  }
+  scroll({top:rect.top+window.scrollY-navheight-margin,behavior:"smooth"});
 }
